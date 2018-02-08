@@ -9,7 +9,7 @@
     "test:nyan": "mocha --exit --reporter nyan",
     "test:list": "mocha --exit --reporter list",
     "test:progress": "mocha --exit --reporter progress",
-    "start": "node index"
+    "start": "NODE_ENV=production node index"
   },
   "repository": {
     "type": "git",
