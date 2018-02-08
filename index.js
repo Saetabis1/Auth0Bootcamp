@@ -3,8 +3,13 @@ const app = express();
 const bcrypt = require('bcrypt');
 const owasp = require('owasp-password-strength-test');
 const generator = require('generate-password');
-
+const os = require('os');
 const saltRounds = 10;
+
+app.get('/health', (req, res) => {
+
+  res.json(os.networkInterfaces().eth0[0].address);
+});
 
 app.get('/', (req, res) => {
   res.json({hello: 'World!'});
